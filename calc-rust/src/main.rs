@@ -4,9 +4,13 @@ use funcoes::fator_flange;
 use std::io;
 
 fn main() {
+    let mut erd = String::new();
+    let mut diam_cubo = String::new();
+    let mut num_furos = String::new();
+    let mut padrao_cruz = String::new();
+
     println!("--- Calculadora de raios ---");
     println!("Digite o ERD da roda: ");
-    let mut erd = String::new();
 
     io::stdin().read_line(&mut erd)
         .expect("Falha ao ler entrada");
