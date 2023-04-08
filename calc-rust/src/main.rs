@@ -5,6 +5,7 @@ use std::io;
 
 fn main() {
     let mut erd = String::new();
+    let mut diam_aro = String::new();
     let mut diam_cubo = String::new();
     let mut num_furos = String::new();
     let mut padrao_cruz = String::new();
@@ -18,6 +19,13 @@ fn main() {
         Err(_) => panic!("Entrada inválida"),
     };
 
+    println!("Digite o diâmetro do aro: ");
+    io::stdin().read_line(&mut diam_aro).expect("Falha ao ler entrada");
+    let diam_aro: f32 = match  diam_aro.trim().parse() {
+        Ok(num) => num,
+        Err(_) => panic!("Entrada inválida"),
+    };
+
     println!("Digite o diâmetro do cubo da bicicleta: ");
     io::stdin().read_line(&mut diam_cubo).expect("Falha ao ler entrada");
     let diam_cubo: f32 = match diam_cubo.trim().parse() {
@@ -27,14 +35,14 @@ fn main() {
 
     println!("Digite o número de furos do cubo: ");
     io::stdin().read_line(&mut num_furos).expect("Falha ao ler entrada");
-    let num_furos: f32 = match num_furos.trim().parse() {
+    let num_furos: i32 = match num_furos.trim().parse() {
         Ok(num) => num,
         Err(_) => panic!("Entrada inválida"),
     };
 
     println!("Digite o padrão de variação: ");
     io::stdin().read_line(&mut padrao_cruz).expect("Falha ao ler entrada");
-    let padrao_cruz: i32 = match padrao_cruz.trim().parse() {
+    let padrao_cruz: i64 = match padrao_cruz.trim().parse() {
         Ok(num) => num,
         Err(_) => panic!("Entrada inválida")
     };
