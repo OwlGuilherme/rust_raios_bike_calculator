@@ -4,7 +4,8 @@ pub fn calc_fator_flange(num_furos: i32, padrao_cruz: f64) -> f64 {
     fator_flange
 }
 
-pub fn calc_camp_raio(diam_raio: f64, diam_cubo: f64, fator_flange: f64) -> f64 {
+pub fn calc_camp_raio(num_furos: i32, padrao_cruz: f64, diam_raio: f64, diam_cubo: f64) -> f64 {
+    let fator_flange = calc_fator_flange(num_furos, padrao_cruz);
     let comp_raio = ((diam_raio / 2.0).powi(2) + (diam_cubo / 2.0).powi(2) - (fator_flange * diam_cubo / 2.0 ).powi(2)).sqrt();
     comp_raio
 }
