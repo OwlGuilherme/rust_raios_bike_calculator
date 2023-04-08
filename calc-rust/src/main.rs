@@ -1,6 +1,6 @@
 mod funcoes;
-use funcoes::camp_raio;
-use funcoes::fator_flange;
+use funcoes::calc_camp_raio;
+use funcoes::calc_fator_flange;
 use std::io;
 
 fn main() {
@@ -51,6 +51,7 @@ fn main() {
 
     println!("ERD: {}", erd);
     println!("Diâmetro do cubo: {}", diam_cubo);
+    println!("Diâmetro do aro: {}", diam_aro);
     println!("Número de furos do cubo: {}", num_furos);
     println!("Padrão de cruzamento do aros: {}", padrao_cruz);
 }
