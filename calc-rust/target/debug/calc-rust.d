@@ -1,0 +1,1 @@
+/home/guilherme/Documentos/Github/rust_raios_bike_calculator/calc-rust/target/debug/calc-rust: /home/guilherme/Documentos/Github/rust_raios_bike_calculator/calc-rust/src/funcoes.rs /home/guilherme/Documentos/Github/rust_raios_bike_calculator/calc-rust/src/main.rs
